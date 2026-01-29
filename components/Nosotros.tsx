@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Eye, Users, Award } from 'lucide-react';
+import { Target, Eye, Award } from 'lucide-react';
 
 const Nosotros: React.FC = () => {
   return (
@@ -19,6 +19,21 @@ const Nosotros: React.FC = () => {
 
       {/* Philosophy Section */}
       <section className="py-24 container mx-auto px-6">
+        {/* Introduction Text */}
+        <div className="max-w-4xl mx-auto mb-20 space-y-6">
+          <p className="text-xl text-raisin leading-relaxed font-light text-justify md:text-center">
+            Argus nace con la experiencia y compromiso de una fusión de empresas de larga trayectoria nacional que por más de 15 años han trabajado en sistemas de seguridad y de protección contra incendios.
+          </p>
+          <p className="text-lg text-silver leading-relaxed text-justify md:text-center">
+            Nos dedicamos a proteger personas y bienes, brindando tranquilidad a través del uso de tecnología inteligente.
+            Aplicamos soluciones modernas que convierten los riesgos en confianza y aportan valor real a la seguridad de nuestros clientes.
+          </p>
+          <p className="text-lg text-silver leading-relaxed text-justify md:text-center">
+            Contamos con amplia experiencia brindando servicios de seguridad a clientes en sectores como construcción,
+            financiero, centros de llamadas, educación, distribución, comercio e industria.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-6">
             <div className="text-firebrick"><Target size={48} /></div>
@@ -43,24 +58,6 @@ const Nosotros: React.FC = () => {
               <li className="flex items-center gap-2"><div className="w-1 h-1 bg-firebrick"></div> Excelencia Operativa</li>
               <li className="flex items-center gap-2"><div className="w-1 h-1 bg-firebrick"></div> Compromiso con el Cliente</li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section Mockup */}
-      <section className="bg-platinum py-24">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-heading font-light text-raisin mb-16">Nuestro <span className="font-bold">Equipo Directivo</span></h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="relative aspect-[3/4] bg-raisin mb-4 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-                  <div className="absolute inset-0 bg-firebrick/10 group-hover:bg-transparent"></div>
-                </div>
-                <h4 className="text-lg font-heading font-bold text-raisin uppercase tracking-widest">Director Ejecutivo</h4>
-                <p className="text-silver text-sm">Especialista en Seguridad Internacional</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

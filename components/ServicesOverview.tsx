@@ -1,8 +1,13 @@
 import React from 'react';
 import { Shield, Cctv, Flame, Briefcase, ChevronRight } from 'lucide-react';
 
+interface ServicesOverviewProps {
+  onNavigate?: (view: string) => void;
+}
+
 const services = [
   {
+    id: "seguridad-vigilancia",
     title: "Seguridad & Vigilancia",
     desc: "Personal altamente capacitado para resguardo físico de instalaciones críticas y comerciales.",
     image: "https://drive.google.com/thumbnail?id=1liyy7athnwprW237aGs6g28Y3jVSweZI&sz=w1000",
@@ -10,6 +15,7 @@ const services = [
     tag: "HUMAN TALENT"
   },
   {
+    id: "soluciones-electronicas",
     title: "Soluciones Electrónicas",
     desc: "CCTV con analítica avanzada, control de acceso biométrico e integración de sistemas inteligentes.",
     image: "https://drive.google.com/thumbnail?id=1mpBpUOYBlCKniwpasFc_o0_oNxoDkx47&sz=w1000",
@@ -17,6 +23,7 @@ const services = [
     tag: "SMART TECH"
   },
   {
+    id: "proteccion-incendios",
     title: "Protección Contra Incendios",
     desc: "Diseño, instalación y monitoreo de sistemas de detección y supresión bajo normas internacionales.",
     image: "https://drive.google.com/thumbnail?id=1UxSCdudpS9-Hx_iTQ1IYwFiVwmye_-aE&sz=w1000",
@@ -24,6 +31,7 @@ const services = [
     tag: "CERTIFIED"
   },
   {
+    id: "servicios-corporativos",
     title: "Servicios Corporativos",
     desc: "Consultoría de riesgos, auditorías de seguridad y programas de prevención de pérdidas.",
     image: "https://drive.google.com/thumbnail?id=1UmtXpMAoT6PDZs3OE8Rc5KuYD9y2llr_&sz=w1000",
@@ -32,9 +40,15 @@ const services = [
   }
 ];
 
-const ServicesOverview: React.FC = () => {
+const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onNavigate }) => {
+  const handleServiceClick = (serviceId: string) => {
+    if (onNavigate) {
+      onNavigate(serviceId);
+    }
+  };
+
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section id="services-overview" className="py-24 bg-white relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-platinum/30 -skew-x-12 translate-x-1/2"></div>
       
@@ -67,7 +81,10 @@ const ServicesOverview: React.FC = () => {
                 <p className="text-silver text-sm leading-relaxed mb-6 h-16 line-clamp-3">
                   {s.desc}
                 </p>
-                <button className="flex items-center gap-2 text-firebrick text-xs font-bold tracking-widest uppercase hover:text-barnred transition-colors">
+                <button 
+                  onClick={() => handleServiceClick(s.id)}
+                  className="flex items-center gap-2 text-firebrick text-xs font-bold tracking-widest uppercase hover:text-barnred transition-colors"
+                >
                   Más Información <ChevronRight size={14} />
                 </button>
               </div>

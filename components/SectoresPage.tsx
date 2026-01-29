@@ -1,8 +1,11 @@
-
 import React from 'react';
 import { Factory, ShoppingCart, GraduationCap, Landmark, Plane, Hospital, Building2, Truck } from 'lucide-react';
 
-const SectoresPage: React.FC = () => {
+interface SectoresPageProps {
+  onCtaClick: () => void;
+}
+
+const SectoresPage: React.FC<SectoresPageProps> = ({ onCtaClick }) => {
   const allSectors = [
     { icon: <Factory />, name: "Industrial & Logística", desc: "Seguridad para plantas de producción y centros de distribución masiva." },
     { icon: <ShoppingCart />, name: "Retail & Comercio", desc: "Prevención de pérdidas y control de inventarios en puntos de venta." },
@@ -49,7 +52,10 @@ const SectoresPage: React.FC = () => {
           <p className="text-silver max-w-3xl mx-auto mb-12 text-lg">
             Nuestro equipo de consultoría diseña protocolos únicos basados en su ubicación geográfica, naturaleza operativa y presupuesto. Contáctenos para un diseño personalizado.
           </p>
-          <button className="bg-firebrick hover:bg-barnred px-12 py-5 font-bold tracking-widest uppercase text-sm transition-all shadow-xl">
+          <button 
+            onClick={onCtaClick}
+            className="bg-firebrick hover:bg-barnred px-12 py-5 font-bold tracking-widest uppercase text-sm transition-all shadow-xl"
+          >
             Solicitar Consultoría Técnica
           </button>
         </div>

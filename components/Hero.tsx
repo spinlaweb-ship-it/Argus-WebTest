@@ -6,6 +6,13 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
+  const scrollToServices = () => {
+    const section = document.getElementById('services-overview');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative h-screen flex items-center bg-raisin overflow-hidden">
       {/* Background Image with HUD Overlay */}
@@ -45,7 +52,10 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               SOLICITAR ASESORÍA
               <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="border border-silver/30 hover:border-white hover:bg-white/5 text-white px-10 py-5 rounded-sm font-bold tracking-widest transition-all flex items-center justify-center gap-2">
+            <button 
+              onClick={scrollToServices}
+              className="border border-silver/30 hover:border-white hover:bg-white/5 text-white px-10 py-5 rounded-sm font-bold tracking-widest transition-all flex items-center justify-center gap-2"
+            >
               <ShieldCheck size={20} />
               NUESTROS SERVICIOS
             </button>

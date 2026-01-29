@@ -10,6 +10,10 @@ import ContactModal from './components/ContactModal';
 import Nosotros from './components/Nosotros';
 import Soluciones from './components/Soluciones';
 import SectoresPage from './components/SectoresPage';
+import SeguridadVigilancia from './components/SeguridadVigilancia';
+import SolucionesElectronicas from './components/SolucionesElectronicas';
+import ProteccionIncendios from './components/ProteccionIncendios';
+import ServiciosCorporativos from './components/ServiciosCorporativos';
 import { Phone } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -27,13 +31,21 @@ const App: React.FC = () => {
       case 'soluciones':
         return <Soluciones />;
       case 'sectores':
-        return <SectoresPage />;
+        return <SectoresPage onCtaClick={() => setIsModalOpen(true)} />;
+      case 'seguridad-vigilancia':
+        return <SeguridadVigilancia />;
+      case 'soluciones-electronicas':
+        return <SolucionesElectronicas />;
+      case 'proteccion-incendios':
+        return <ProteccionIncendios />;
+      case 'servicios-corporativos':
+        return <ServiciosCorporativos />;
       default:
         return (
           <div className="fade-in">
             <Hero onCtaClick={() => setIsModalOpen(true)} />
             <ValuePropStrip />
-            <ServicesOverview />
+            <ServicesOverview onNavigate={(v) => setView(v)} />
             <ClientSectors />
             <Certifications />
           </div>

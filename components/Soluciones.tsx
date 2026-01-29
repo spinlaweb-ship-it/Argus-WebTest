@@ -57,13 +57,18 @@ const Soluciones: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="md:w-1/2 relative aspect-video bg-raisin overflow-hidden shadow-2xl">
-             <div className="absolute inset-0 flex items-center justify-center opacity-30">
-                <div className="w-2/3 h-2/3 border border-firebrick/30 relative">
-                   <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-firebrick"></div>
-                   <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-firebrick"></div>
-                </div>
-             </div>
+          <div className="md:w-1/2 relative aspect-video bg-raisin overflow-hidden shadow-2xl group">
+             <img 
+               src="https://drive.google.com/thumbnail?id=1b3UKRw63ygmVpLvBgDnWNTYYlsMD7vf1&sz=w1000" 
+               alt="Sistemas Inteligentes de Seguridad" 
+               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+             />
+             {/* Subtle overlay for better integration with the theme */}
+             <div className="absolute inset-0 bg-raisin/10 group-hover:bg-transparent transition-colors"></div>
+             
+             {/* Corner Accents */}
+             <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-firebrick/80"></div>
+             <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-firebrick/80"></div>
           </div>
         </div>
       </section>
