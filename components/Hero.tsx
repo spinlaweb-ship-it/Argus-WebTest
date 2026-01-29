@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
       {/* Background Image with HUD Overlay */}
       <div className="absolute inset-0">
         <img 
-          src="hero-soc.jpg" 
+          src="https://drive.google.com/thumbnail?id=1MnUz8m8TBrIKt8dKIA2YB1uyqhTjlFSo&sz=w1920" 
           alt="ARGUS Security Operations Center" 
           className="w-full h-full object-cover opacity-80"
         />

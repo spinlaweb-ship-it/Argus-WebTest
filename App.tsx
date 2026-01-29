@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import ValuePropStrip from './components/ValuePropStrip';
 import ServicesOverview from './components/ServicesOverview';
 import ClientSectors from './components/ClientSectors';
+import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
 import Nosotros from './components/Nosotros';
@@ -34,6 +35,7 @@ const App: React.FC = () => {
             <ValuePropStrip />
             <ServicesOverview />
             <ClientSectors />
+            <Certifications />
           </div>
         );
     }

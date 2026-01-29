@@ -5,28 +5,28 @@ const services = [
   {
     title: "Seguridad & Vigilancia",
     desc: "Personal altamente capacitado para resguardo físico de instalaciones críticas y comerciales.",
-    image: "https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2000&auto=format&fit=crop",
+    image: "https://drive.google.com/thumbnail?id=1liyy7athnwprW237aGs6g28Y3jVSweZI&sz=w1000",
     icon: <Shield size={24} />,
     tag: "HUMAN TALENT"
   },
   {
     title: "Soluciones Electrónicas",
     desc: "CCTV con analítica avanzada, control de acceso biométrico e integración de sistemas inteligentes.",
-    image: "https://images.unsplash.com/photo-1557597774-9d2739f85a76?q=80&w=2000&auto=format&fit=crop",
+    image: "https://drive.google.com/thumbnail?id=1mpBpUOYBlCKniwpasFc_o0_oNxoDkx47&sz=w1000",
     icon: <Cctv size={24} />,
     tag: "SMART TECH"
   },
   {
     title: "Protección Contra Incendios",
     desc: "Diseño, instalación y monitoreo de sistemas de detección y supresión bajo normas internacionales.",
-    image: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2000&auto=format&fit=crop",
+    image: "https://drive.google.com/thumbnail?id=1UxSCdudpS9-Hx_iTQ1IYwFiVwmye_-aE&sz=w1000",
     icon: <Flame size={24} />,
     tag: "CERTIFIED"
   },
   {
     title: "Servicios Corporativos",
     desc: "Consultoría de riesgos, auditorías de seguridad y programas de prevención de pérdidas.",
-    image: "https://images.unsplash.com/photo-1454165833767-027eeef1596e?q=80&w=2000&auto=format&fit=crop",
+    image: "https://drive.google.com/thumbnail?id=1UmtXpMAoT6PDZs3OE8Rc5KuYD9y2llr_&sz=w1000",
     icon: <Briefcase size={24} />,
     tag: "STRATEGY"
   }
@@ -58,9 +58,6 @@ const ServicesOverview: React.FC = () => {
                 <div className="absolute inset-0 bg-raisin/40 group-hover:bg-firebrick/20 transition-colors"></div>
                 <div className="absolute top-4 left-4 bg-firebrick text-white p-3 rounded-sm shadow-lg">
                   {s.icon}
-                </div>
-                <div className="absolute bottom-4 left-4 text-[10px] font-bold tracking-widest text-white/80 uppercase">
-                    {s.tag}
                 </div>
               </div>
 

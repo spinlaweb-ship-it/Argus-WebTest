@@ -21,21 +21,27 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     }
   };
 
+  const ArgusLogo = () => (
+    <div className="flex flex-col items-start">
+      <img 
+        src="https://drive.google.com/thumbnail?id=1n8xP9p0oIbsohQjlYCvG92_yhZhyN4RM&sz=w1000" 
+        alt="ARGUS Security Logo" 
+        className="h-10 md:h-12 w-auto object-contain"
+        referrerPolicy="no-referrer"
+      />
+    </div>
+  );
+
   return (
     <footer className="bg-raisin text-white pt-20 pb-10 border-t border-white/5 font-sans">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div className="space-y-6">
-            <div className="flex flex-col items-start gap-1">
-              <img 
-                src="logo.png" 
-                alt="ARGUS Security" 
-                className="h-8 w-auto object-contain brightness-0 invert" 
-              />
-              <span className="text-silver text-[8px] tracking-[0.5em] font-bold uppercase opacity-60">SECURITY</span>
+            <div className="flex flex-col items-start">
+              <ArgusLogo />
             </div>
-            <p className="text-silver text-sm leading-relaxed">
+            <p className="text-silver text-sm leading-relaxed max-w-xs">
               Líderes en soluciones integrales de seguridad en Costa Rica. Fusión de inteligencia humana y tecnológica para una protección sin precedentes.
             </p>
             <div className="flex gap-4">
@@ -45,7 +51,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Quick Links Updated */}
+          {/* Quick Links */}
           <div>
             <h4 className="font-heading font-bold text-sm tracking-widest uppercase mb-8 border-l-2 border-firebrick pl-4">Enlaces</h4>
             <ul className="space-y-4 text-silver text-sm">
@@ -53,7 +59,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li key={link.id}>
                   <button 
                     onClick={() => handleNav(link.id)}
-                    className="hover:text-firebrick transition-colors text-left"
+                    className="hover:text-firebrick transition-colors text-left uppercase tracking-widest text-[11px] font-bold"
                   >
                     {link.label}
                   </button>
@@ -80,34 +86,15 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
             </ul>
           </div>
-
-          {/* Certifications */}
-          <div>
-            <h4 className="font-heading font-bold text-sm tracking-widest uppercase mb-8 border-l-2 border-firebrick pl-4">Certificaciones</h4>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/5 p-4 flex flex-col items-center justify-center rounded-sm hover:bg-white/10 transition-colors">
-                <span className="font-heading font-bold text-xs text-white">ALAS</span>
-                <span className="text-[8px] text-silver uppercase text-center">Asociación Latinoamericana</span>
-              </div>
-              <div className="bg-white/5 p-4 flex flex-col items-center justify-center rounded-sm hover:bg-white/10 transition-colors">
-                <span className="font-heading font-bold text-xs text-white">NFPA</span>
-                <span className="text-[8px] text-silver uppercase text-center">Sistemas Contra Incendio</span>
-              </div>
-              <div className="bg-white/5 p-4 flex flex-col items-center justify-center rounded-sm hover:bg-white/10 transition-colors">
-                <span className="font-heading font-bold text-xs text-white">ASIS</span>
-                <span className="text-[8px] text-silver uppercase text-center">Management System</span>
-              </div>
-              <div className="bg-white/5 p-4 flex flex-col items-center justify-center rounded-sm hover:bg-white/10 transition-colors">
-                <span className="font-heading font-bold text-xs text-white">ISO</span>
-                <span className="text-[8px] text-silver uppercase text-center">9001:2015</span>
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Bottom Bar Updated */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4 text-silver text-[10px] uppercase tracking-widest text-center">
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-silver text-[10px] uppercase tracking-[0.3em] text-center">
           <p>© {new Date().getFullYear()} ARGUS Security CR. Todos los derechos reservados.</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-white transition-colors">Privacidad</a>
+            <a href="#" className="hover:text-white transition-colors">Términos</a>
+          </div>
         </div>
       </div>
     </footer>
